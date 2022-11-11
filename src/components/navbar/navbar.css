@@ -1,0 +1,54 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    background: #0D99FF;
+
+    ;
+}
+
+.navbarLeft{
+    display: flex;
+    gap:20px;
+}
+
+.Nav-text{
+    color:#FFFFFF;
+    text-decoration: none;
+}
+
+.name{
+    text-align: center;
+}
+
+.navbarSearch{
+    display: flex;
+}
+.search{
+    width: 450px;
+}
+
+.search-icon{
+    background-color: red;
+}
+
+.login{
+    padding: 10px 70px;
+    background: #FFFFFF;
+    color: #0D99FF;
+}
+
+.navbar .main .login .text-login{
+    color: #0D99FF;
+    text-decoration: none;
+}
+
+.navbarRight{
+    font-size: 30px;
+    background: #FFFFFF;
+}

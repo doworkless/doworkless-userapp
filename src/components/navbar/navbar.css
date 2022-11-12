@@ -2,53 +2,200 @@
     padding: 0;
     margin: 0;
 }
-
 .navbar{
+    height: 35px;
     display: flex;
     justify-content: space-between;
     padding: 15px;
     background: #0D99FF;
-
-    ;
+    font-family: 'Roboto', sans-serif;
 }
-
 .navbarLeft{
     display: flex;
-    gap:20px;
+    gap: 50px;
+    align-items: center;
 }
 
-.Nav-text{
+.navbarLogoText{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
     color:#FFFFFF;
     text-decoration: none;
+    font-size: 20px;
 }
 
-.name{
-    text-align: center;
+.navbarLogoText1{
+    font-size: 35px;
+}
+
+.navbarLogoText2{
+    font-size: 15px;
+    color:#FFFFFF;
 }
 
 .navbarSearch{
+    width: 500px;
+    height: 40px;
+    background-color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.navbarSearchInput{
+    border: none;
+    width: 90%;
+    padding-left: 16px;
+}
+
+.navbarSearchInput:focus{
+    outline: none;
+}
+
+.navbarSearchIcon
+{
+    font-size: 20px;
+}
+.navbarSearchDropdown{
+    flex-direction: column;
+    width: 470px;
+    height: 262px;
+    gap: 20px;
+    border-radius: 0 0 2px 2px;
+    border-top: 1px solid #e0e0e0;
+    background-color: #FFFFFF;
+    position: absolute;
+    top: 40px;
+    padding-left: 30px;
+    box-shadow: 2px 3px 5px -1px rgb(0 0 0 / 50%);
+}
+/* .navbarSearchDropdown{
+    width: 100%;
+    border-radius: 0 0 2px 2px;
+    border-top: 1px solid #e0e0e0;
+    position: absolute;
+    background-color: #fff;
+    color: #000;
+    z-index: 9;
+    top: 40px;
+    box-shadow: 2px 3px 5px -1px rgb(0 0 0 / 50%);
+    overflow: hidden;
+    white-space: nowrap;
+} */
+ hr{
+    height: 1px;
+    border: 0;
+    background: #c7c6c6;
+    width: 90%;
+}
+.navbarSearchDropdownTag{
+    font-size: 12px;
+    font-weight: 100;
+}
+
+.navbarLogin{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 138px;
+    height: 30px;
+    color: #0D99FF;
+    background: #FFFFFF;
+    border-radius: 5px;
+    gap: 10px;
+    position: relative;
+}
+
+.navbarLoginText{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+
+.navbarLogin:hover .navbarLoginDropdownBottom{
+    cursor: pointer;
     display: flex;
 }
-.search{
-    width: 450px;
+.navbarLoginDropdown{
+    position: absolute;
+    top: 30px;
 }
-
-.search-icon{
-    background-color: red;
-}
-
-.login{
-    padding: 10px 70px;
+.navbarLoginDropdownBottom{
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    line-height: 19px;
+    width: 200px;
+    height: 251px;
     background: #FFFFFF;
-    color: #0D99FF;
+    color: #000000;
+    font-size: 16.5px;
+    font-weight: 600;
+    box-shadow: 2px 3px 5px -1px rgb(0 0 0 / 50%);
+    padding: 30px 20px 0px 20px;
+}
+.navbarLoginDropdownTop{
+    width: 100%;
+    height: 15px;
+    background-color: #FFFFFF;
+    clip-path: polygon(50% 0, 46% 100%, 54% 100%);
+}
+.navbarLoginDropdownCustomer{
+    display: flex;
+    justify-content: space-between;
 }
 
-.navbar .main .login .text-login{
-    color: #0D99FF;
-    text-decoration: none;
+.navbarMore{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #FFFFFF;
+    font-size: 20px;
+    cursor: pointer;
+    position: relative;
+}
+.navbarMoreDropdown{
+    position: absolute;
+    top: 24px;
+}
+.navbarMoreDropdownBottom{
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    line-height: 19px;
+    width: 200px;
+    height: 251px;
+    background: #FFFFFF;
+    color: #000000;
+    font-size: 16.5px;
+    font-weight: 600;
+    box-shadow: 2px 3px 5px -1px rgb(0 0 0 / 50%);
+    padding: 30px 20px 0px 20px;
+}
+.navbarMoreDropdownTop{
+    width: 100%;
+    height: 20px;
+    background-color: #FFFFFF;
+    clip-path: polygon(50% 0, 46% 100%, 54% 100%);
+}
+.navbarMore:hover .navbarMoreDropdownBottom{
+    display: flex;
 }
 
 .navbarRight{
-    font-size: 30px;
-    background: #FFFFFF;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #FFFFFF;
+}
+.navbarRight:hover{
+    cursor: pointer;
+}
+.navbarRightIcon{
+    font-size: 40px;
+}
+
+.navbarRightText{
+    font-size: 20px;
 }

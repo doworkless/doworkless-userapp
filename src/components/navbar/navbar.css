@@ -3,40 +3,43 @@
     margin: 0;
 }
 .navbar{
-    height: 35px;
+    height: 8vh;
     display: flex;
-    justify-content: space-between;
-    padding: 15px;
+    padding: 0.5%;
     background: #0D99FF;
     font-family: 'Roboto', sans-serif;
 }
 .navbarLeft{
+    width: 100vw;
+    flex: 3;
     display: flex;
-    gap: 50px;
+    gap: 4vw;
     align-items: center;
 }
 
+.navbarLogo{
+    width: 12vw;
+}
 .navbarLogoText{
     display: flex;
     flex-direction: column;
     text-align: center;
     color:#FFFFFF;
     text-decoration: none;
-    font-size: 20px;
 }
 
 .navbarLogoText1{
-    font-size: 35px;
+    font-size: 2.2vw;
 }
 
 .navbarLogoText2{
-    font-size: 15px;
+    font-size: 1vw;
     color:#FFFFFF;
 }
 
 .navbarSearch{
-    width: 500px;
-    height: 40px;
+    width: 35vw;
+    height: 5.6vh;
     background-color: #FFFFFF;
     display: flex;
     align-items: center;
@@ -46,7 +49,7 @@
 .navbarSearchInput{
     border: none;
     width: 90%;
-    padding-left: 16px;
+    padding-left: 1vw;
 }
 
 .navbarSearchInput:focus{
@@ -55,19 +58,19 @@
 
 .navbarSearchIcon
 {
-    font-size: 20px;
+    font-size: 1.5vw;
 }
 .navbarSearchDropdown{
     flex-direction: column;
-    width: 470px;
-    height: 262px;
-    gap: 20px;
+    width: 33vw;
+    height: 36.69vh;
+    gap: 2.8vh;
     border-radius: 0 0 2px 2px;
     border-top: 1px solid #e0e0e0;
     background-color: #FFFFFF;
     position: absolute;
-    top: 40px;
-    padding-left: 30px;
+    top: 5.6vh;
+    padding-left: 1.953vw;
     box-shadow: 2px 3px 5px -1px rgb(0 0 0 / 50%);
 }
 /* .navbarSearchDropdown{
@@ -98,17 +101,16 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 138px;
-    height: 30px;
+    width: 7vw;
+    height: 5vh;
     color: #0D99FF;
     background: #FFFFFF;
-    border-radius: 5px;
-    gap: 10px;
+    gap: 0.65vw;
     position: relative;
 }
 
 .navbarLoginText{
-    font-size: 20px;
+    font-size: 1.3vw;
     font-weight: bold;
 }
 
@@ -119,25 +121,25 @@
 }
 .navbarLoginDropdown{
     position: absolute;
-    top: 30px;
+    top: 5.1vh;
 }
 .navbarLoginDropdownBottom{
     display: none;
     flex-direction: column;
-    gap: 10px;
-    line-height: 19px;
-    width: 200px;
-    height: 251px;
+    gap: 0.65vw;
+    line-height: 2.8vh;
+    width: 12vw;
+    height: 35.154vh;
     background: #FFFFFF;
     color: #000000;
-    font-size: 16.5px;
-    font-weight: 600;
+    font-size: 1.074vw;
+    font-weight: 400;
     box-shadow: 2px 3px 5px -1px rgb(0 0 0 / 50%);
-    padding: 30px 20px 0px 20px;
+    padding: 4.2vh 2.8vh 0px 1.302vw;
 }
 .navbarLoginDropdownTop{
     width: 100%;
-    height: 15px;
+    height: 2.3vh;
     background-color: #FFFFFF;
     clip-path: polygon(50% 0, 46% 100%, 54% 100%);
 }
@@ -151,51 +153,88 @@
     align-items: center;
     justify-content: center;
     color: #FFFFFF;
-    font-size: 20px;
+    font-size: 1.3vw;
     cursor: pointer;
     position: relative;
 }
 .navbarMoreDropdown{
     position: absolute;
-    top: 24px;
+    top: 3vh;
 }
 .navbarMoreDropdownBottom{
     display: none;
     flex-direction: column;
-    gap: 10px;
-    line-height: 19px;
-    width: 200px;
-    height: 251px;
+    gap: 1.5vh;
+    line-height: 2.8vh;
+    width: 12vw;
+    height: 35.154vh;
     background: #FFFFFF;
     color: #000000;
-    font-size: 16.5px;
-    font-weight: 600;
+    font-size: 1.074vw;
+    font-weight: 400;
     box-shadow: 2px 3px 5px -1px rgb(0 0 0 / 50%);
-    padding: 30px 20px 0px 20px;
+    padding: 4.2vh 2.8vh 0px 1.302vw;
 }
 .navbarMoreDropdownTop{
     width: 100%;
-    height: 20px;
+    height: 3.8vh;
     background-color: #FFFFFF;
-    clip-path: polygon(50% 0, 46% 100%, 54% 100%);
+    clip-path: polygon(50% 40%, 45% 100%, 55% 100%);
 }
 .navbarMore:hover .navbarMoreDropdownBottom{
     display: flex;
 }
+.navbarMore:hover .navbarMoreIcon{
+    transform: rotate(180deg);
+}
 
 .navbarRight{
+    flex: 1;
+    justify-content: flex-end;
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 0.6vw;
     color: #FFFFFF;
+    padding-right: 2vw;
 }
 .navbarRight:hover{
     cursor: pointer;
 }
 .navbarRightIcon{
-    font-size: 40px;
+    font-size: 2.604vw;
 }
 
 .navbarRightText{
-    font-size: 20px;
+    font-size: 1.3vw;
+}
+
+@media(max-width:600px){
+    .navbar{
+        width: 100vw;
+        height: 12vh;
+        display: block;
+        position: relative;
+    }
+    .navbarSearch{
+        position: absolute;
+        width: 94vw;
+        height: 5vh;
+        top: 6.5vh;
+        margin-left: 1.5vw;
+        border-radius: 4px;
+        padding-left: 3vw;
+    }
+    .navbarSearchIcon{
+        font-size: 1rem;
+        font-weight: 400;
+        color: #858585;
+    }
+    .navbarLoginIcon, .navbarMore{
+        display: none;
+    }
+    .navbarLogin{
+        color: #FFFFFF;
+        background: #0D99FF;
+    }
+
 }

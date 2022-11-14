@@ -5,9 +5,13 @@ import {BsCart2}from 'react-icons/bs'
 import {BiSearch} from 'react-icons/bi'
 import {FiLogIn} from 'react-icons/fi'
 import {MdExpandMore} from 'react-icons/md'
+import {FiMenu} from 'react-icons/fi'
+import Sidebar from '../sidebar/Sidebar';
+
 
 export default function Navbar(){
     const [dropDownDisplay, setDropDownDisplay] = useState('none')
+    const [sidebarDisplay, setSidebarDisplay] = useState('translateX(0px)')
     const catMenu = useRef(null);
     const searchHandler = ()=>{
         setDropDownDisplay('flex');
@@ -18,9 +22,15 @@ export default function Navbar(){
         }
     }
     document.addEventListener('mousedown',closeOpenMenus);
+    const sidebarHandler = ()=>{
+        console.log('hit');
+        // setSidebarDisplay('translateX(0vw)');
+    }
     return(
+        <>
         <nav className='navbar'>
             <div className='navbarLeft'>
+                <FiMenu className='navbarMenuIcon' onClick={sidebarHandler} />
                 <div className='navbarLogo'>
                     <Link className='navbarLogoText'>
                         <span className='navbarLogoText1'>WorkLess</span>
@@ -40,6 +50,7 @@ export default function Navbar(){
                         <div>Bussiness</div>
                     </div>
                 </div>
+                <BsCart2 className='navbarMobileCart'/>
                 <div className='navbarLogin'>
                     <span className='navbarLoginText'>Login</span>
                     <FiLogIn className='navbarLoginIcon'/>
@@ -84,8 +95,11 @@ export default function Navbar(){
                 <BsCart2 className='navbarRightIcon'/>
                 <span className='navbarRightText'>Cart</span>
             </div>
-            
         </nav>
+        <div style={{transform:sidebarDisplay}} >
+            <Sidebar/>
+        </div>
+        </>
     );
 }
 

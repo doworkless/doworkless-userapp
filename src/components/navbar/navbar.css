@@ -3,7 +3,7 @@
     margin: 0;
 }
 .navbar{
-    height: 8vh;
+    height: 57px;
     display: flex;
     padding: 0.5%;
     background: #0D99FF;
@@ -39,7 +39,7 @@
 
 .navbarSearch{
     width: 35vw;
-    height: 5.6vh;
+    height: 40px;
     background-color: #FFFFFF;
     display: flex;
     align-items: center;
@@ -97,12 +97,16 @@
     font-weight: 100;
 }
 
+.navbarMobileCart{
+    display: none;
+}
+
 .navbarLogin{
     display: flex;
     align-items: center;
     justify-content: center;
     width: 7vw;
-    height: 5vh;
+    height: 37px;
     color: #0D99FF;
     background: #FFFFFF;
     gap: 0.65vw;
@@ -209,17 +213,40 @@
 }
 
 @media(max-width:600px){
+   
     .navbar{
         width: 100vw;
-        height: 12vh;
+        height: 100px;
         display: block;
         position: relative;
+        z-index: 1;
+    }
+    .navbarMenuIcon{
+        display: block;
+        margin-left: 5vw;
+        margin-top: 5px;
+        font-size: 25px;
+        color: #FFFFFF;
+    }
+    .navbarLogo{
+        left: 5vw;
+        width: 25vw;
+        height: 30px;
+    }
+    .navbarLogoText1{
+        font-size: 20px;
+        font-weight: 800;
+        margin-bottom: -5px;
+    }
+    .navbarLogoText2{
+        font-size: 8px;
+        padding-left: 7px;
     }
     .navbarSearch{
         position: absolute;
         width: 94vw;
-        height: 5vh;
-        top: 6.5vh;
+        height: 40px;
+        top: 55px;
         margin-left: 1.5vw;
         border-radius: 4px;
         padding-left: 3vw;
@@ -229,12 +256,27 @@
         font-weight: 400;
         color: #858585;
     }
-    .navbarLoginIcon, .navbarMore{
-        display: none;
+    .navbarLoginIcon, .navbarMore, .navbarSearchDropdown, .navbarRight{
+        display: none !important;
+    }
+    .navbarMobileCart{
+        display: block;
+        color: #FFFFFF;
+        font-size: 30px;
+        margin-left: auto;
+        margin-top: 5px;
     }
     .navbarLogin{
         color: #FFFFFF;
         background: #0D99FF;
+        right: 22px;
+        top: 5px;
+        margin-left: 40px;
     }
+    .navbarLoginText{
+        font-size: 20px;
+        font-weight: 400;
+    }
+
 
 }
